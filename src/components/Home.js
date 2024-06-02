@@ -1,5 +1,5 @@
-import kasaList from "./datas/kasaList"
-function App() {
+import kasaList from "../datas/kasaList"
+function Home() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
