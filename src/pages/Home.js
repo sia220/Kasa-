@@ -1,4 +1,6 @@
 import kasaList from "../datas/kasaList"
+import "../styles/home.scss"
+
 function Home() {
   return (
     <div className="App">
