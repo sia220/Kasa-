@@ -1,25 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Housing from './pages/Housing'
-import Error from './pages/Error'
-import Apropos from './pages/A-propos'
-
-
+import Housing from './pages/Housing';
+import Error from './pages/Error';
+import Apropos from './pages/A-propos';
+import { PageProvider } from './utils/context';
 
 ReactDOM.render(
-  <React.StrictMode>
+   <React.StrictMode>
       <Router>
-          <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/logement" element={<Housing />} />
-              <Route path="/a-propos" element={<Apropos />} />
-              <Route path="*"  element={<Error />} />
-          </Routes>
-                </Router>
-  </React.StrictMode>,
-document.getElementById('root')
-)
-
-
+         <PageProvider>
+            <Routes>
+               <Route path="/" element={<Home />} />
+               <Route path="/logement" element={<Housing />} />
+               <Route path="/a-propos" element={<Apropos />} />
+               <Route path="*" element={<Error />} />
+            </Routes>
+         </PageProvider>
+      </Router>
+   </React.StrictMode>,
+   document.getElementById('root')
+);
