@@ -1,13 +1,17 @@
-import '../styles/banner.scss'
-import HomeImg from "../assets/home.png"
+import '../styles/banner.scss';
+import { PageContext } from '../utils/context/index';
+import { useContext } from 'react';
 
-function Banner(){
-    return (
-        <section className="banner">
-        <img className="banner--img" src={HomeImg} alt="Nature"  />
-        <h1 className="banner--titre" > Chez vous, partout et ailleurs</h1>
+function Banner({ image }) {
+   const { page } = useContext(PageContext);
+   return (
+      <section className="banner">
+         <img className="banner--img" src={image} alt="Nature" />
+         {page === 'home' && (
+            <h1 className="banner--titre"> Chez vous, partout et ailleurs</h1>
+         )}
       </section>
-    )
+   );
 }
 
-export default Banner
+export default Banner;
