@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import Banner from '../components/Banner';
-import BannerImg from '../assets/home.png';
+import BannerImg from '../assets/banner-home.png';
 import { PageContext } from '../utils/context/index';
 import { useContext, useEffect } from 'react';
 
