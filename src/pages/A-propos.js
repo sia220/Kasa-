@@ -16,7 +16,7 @@ function Apropos() {
    return (
       <div className="App">
          <Header />
-         <main className="main">
+         <main className="main--apropos">
             <Banner image={BannerImg} />
             <Collapse
                titre="Fiabilité"

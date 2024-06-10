@@ -16,7 +16,7 @@ function Home() {
    return (
       <div className="App">
          <Header />
-         <main className="main">
+         <main className="main--home">
             <Banner image={BannerImg} />
             <Gallery />
          </main>
