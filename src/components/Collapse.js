@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import ArrowTop from '../assets/arrow-top.png';
-import ArrowBottom from '../assets/arrow-bottom.png';
+import ArrowTop from '../assets/arrow-top.svg';
+import ArrowBottom from '../assets/arrow-bottom.svg';
 import '../styles/collapse.scss';
 
 function Collapse({ titre, description }) {
