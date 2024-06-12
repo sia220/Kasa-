@@ -7,6 +7,7 @@
 
 .header {
     display: flex;
+
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -20,12 +21,15 @@
             padding-right: 40px;
         }
         &--link {
-            color: #FF6060;
+            color: #FF6060; 
             text-decoration: none;
-    
+        }
+        &--accueil {
+            text-decoration: underline;
+        }
+        &--apropos {
+            text-decoration: underline;
         }
 
     }
-    
-    
 }

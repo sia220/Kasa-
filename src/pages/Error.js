@@ -2,8 +2,14 @@ import { Link } from 'react-router-dom';
 import QuatreCentQuatre from '../assets/404.svg';
 import Header from '../components/Header';
 import '../styles/error.scss';
+import { PageContext } from '../utils/context/index';
+import { useContext, useEffect } from 'react';
 
 function Error() {
+   const { setPage, page } = useContext(PageContext);
+   useEffect(() => {
+      setPage(page === 'error');
+   }, []);
    return (
       <div>
          <Header />
