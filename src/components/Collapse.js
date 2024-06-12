@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ArrowTop from '../assets/arrow-top.svg';
 import ArrowBottom from '../assets/arrow-bottom.svg';
 import '../styles/collapse.scss';
+import PropTypes from 'prop-types';
 
 function Collapse({ titre, description }) {
    const [isClose, setIsClose] = useState(true);
@@ -23,5 +24,10 @@ function Collapse({ titre, description }) {
       </div>
    );
 }
+
+Collapse.propTypes = {
+   titre: PropTypes.string,
+   description: PropTypes.string,
+};
 
 export default Collapse;
