@@ -8,9 +8,9 @@ import { PageContext } from '../utils/context/index';
 import { useContext, useEffect } from 'react';
 
 function Home() {
-   const { page, setPage } = useContext(PageContext);
+   const { setPage } = useContext(PageContext);
    useEffect(() => {
-      setPage(page === 'apropos' ? 'home' : 'home');
+      setPage('home');
    }, []);
 
    return (

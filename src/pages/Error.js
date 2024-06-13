@@ -6,9 +6,9 @@ import { PageContext } from '../utils/context/index';
 import { useContext, useEffect } from 'react';
 
 function Error() {
-   const { setPage, page } = useContext(PageContext);
+   const { setPage } = useContext(PageContext);
    useEffect(() => {
-      setPage(page === 'error');
+      setPage('error');
    }, []);
    return (
       <div>

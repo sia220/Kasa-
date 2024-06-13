@@ -8,9 +8,9 @@ import Collapse from '../components/Collapse';
 import '../styles/a-propos.scss';
 
 function Apropos() {
-   const { setPage, page } = useContext(PageContext);
+   const { setPage } = useContext(PageContext);
    useEffect(() => {
-      setPage(page === 'home' ? 'apropos' : 'apropos');
+      setPage('apropos');
    }, []);
 
    return (
