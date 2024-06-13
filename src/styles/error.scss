@@ -1,11 +1,15 @@
 @import "../styles/normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+$primaryColor: #FF6060 ;
+$fontFamily : 'Montserrat', sans-serif;
+
 * {
     box-sizing: border-box;
     @import "../styles/normalize.css";
 
 }
+
 .main--error {
     display: flex;
     flex-direction: column;
@@ -19,20 +23,20 @@
         align-items: center;
         &--p {
             size: 36px;
-            color: #FF6060;
+            color: $primaryColor;
             line-height: 51.34px;
             font : {
-                family : 'Montserrat', sans-serif;
+                family :$fontFamily ;
                 weight : 500;
             }
         }
     }
     &--link {
         size: 18px;
-        color: #FF6060;
+        color: $primaryColor;
         line-height: 25.67px;
         font : {
-            family : 'Montserrat', sans-serif;
+            family : $fontFamily ;
             weight : 500;
         }
     }
