@@ -14,6 +14,7 @@ function Gallery() {
                      alt="Logement"
                   />
                   <p className="article--titre">{element.title}</p>
+                  <div className="article--background"></div>
                </article>
             </Link>
          ))}
