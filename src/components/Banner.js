@@ -10,6 +10,7 @@ function Banner({ image }) {
          {page === 'home' && (
             <h1 className="banner--titre"> Chez vous, partout et ailleurs</h1>
          )}
+         <div className="banner--background"></div>
       </section>
    );
 }
