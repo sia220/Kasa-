@@ -1,5 +1,5 @@
-import { useContext, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import kasaList from '../datas/kasaList.json';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -8,7 +8,6 @@ import Collapse from '../components/Collapse';
 import { PageContext } from '../utils/context/index';
 import StarActive from '../assets/star-active.svg';
 import StarInactive from '../assets/star-inactive.svg';
-
 import '../styles/housing.scss';
 
 function Housing() {
@@ -17,57 +16,52 @@ function Housing() {
       setPage('housing');
    }, []);
 
+   // On récupère l'id du logement depuis l'URL
    const { logementId } = useParams();
 
+   // On récupère l'objet du logement consulté depuis le fichier JSON
    const logementConsulte = kasaList.find(
       (logement) => logement.id === logementId
    );
 
+   // Si l'id de l'URL ne correspond pas à l'id d'un logement du ficher JSON alors on redirige vers la page d'erreur
+   const navigate = useNavigate();
+   useEffect(() => {
+      logementConsulte === undefined
+         ? navigate('*')
+         : console.log('on reste sur la page');
+   }, [logementConsulte]);
+
+   // Variable qui permet de parcourir les étoiles
    const range = [1, 2, 3, 4, 5];
 
-   return (
+   return logementConsulte === undefined ? (
+      <Link to="*"></Link>
+   ) : (
       <div>
          <Header />
          <main className="main--housing">
             <SlideShow />
-            <section
-               style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-               }}>
-               <div>
-                  <h1>{logementConsulte.title}</h1>
-                  <p>{logementConsulte.location}</p>
-                  <div
-                     style={{
-                        display: 'flex',
-                     }}>
+            <section className="infos">
+               <div className="partie1">
+                  <h1 className="partie1--titre">{logementConsulte.title}</h1>
+                  <p className="partie1--localisation">
+                     {logementConsulte.location}
+                  </p>
+                  <div className="partie1--tags">
                      {logementConsulte.tags.map((element, index) => (
-                        <div
-                           style={{
-                              border: 'solid black 1px',
-                              background: '#FF6060',
-                              color: 'white',
-                              borderRadius: '10px',
-                              padding: ' 4px 20px',
-                           }}>
-                           {element}
-                        </div>
+                        <div className="partie1--tags--tag">{element}</div>
                      ))}
                   </div>
                </div>
-               <div>
-                  <div style={{ display: 'flex' }}>
-                     <p>{logementConsulte.host.name}</p>
-                     <div
-                        style={{
-                           borderRadius: '50%',
-                           background: '#C4C4C4',
-                           height: '64px',
-                           width: '64px',
-                        }}></div>
+               <div className="partie2">
+                  <div className="partie2--proprio">
+                     <p className="partie2--proprio--nom">
+                        {logementConsulte.host.name}
+                     </p>
+                     <div className="partie2--proprio--photo"></div>
                   </div>
-                  <div>
+                  <div className="partie2--etoiles">
                      {range.map((rangeElem) =>
                         logementConsulte.rating >= rangeElem ? (
                            <img src={StarActive}></img>
@@ -78,7 +72,7 @@ function Housing() {
                   </div>
                </div>
             </section>
-            <section>
+            <section className="section_collapses">
                <Collapse
                   titre="Description"
                   description={logementConsulte.description}
