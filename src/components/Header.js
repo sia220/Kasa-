@@ -10,7 +10,7 @@ function Header() {
    return (
       <header className="header">
          <Link to="/">
-            <img src={logo} alt="Logo Kasa"></img>
+            <img className="header--img" src={logo} alt="Logo Kasa"></img>
          </Link>
          <nav className="header--nav">
             <Link
@@ -29,7 +29,7 @@ function Header() {
                      ? 'header--nav--link header--nav--apropos'
                      : 'header--nav--link'
                }>
-               A propos
+               À propos
             </Link>
          </nav>
       </header>
