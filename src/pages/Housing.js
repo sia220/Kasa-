@@ -35,6 +35,9 @@ function Housing() {
    // Variable qui permet de parcourir les étoiles
    const range = [1, 2, 3, 4, 5];
 
+   // On place la string du nom et prenom dans un tableau où chacun represente un element
+   const name = logementConsulte.host.name.split(' ');
+
    return logementConsulte === undefined ? (
       <Link to="*"></Link>
    ) : (
@@ -50,14 +53,19 @@ function Housing() {
                   </p>
                   <div className="partie1--tags">
                      {logementConsulte.tags.map((element, index) => (
-                        <div className="partie1--tags--tag">{element}</div>
+                        <div
+                           key={`etoile--${index}`}
+                           className="partie1--tags--tag">
+                           {element}
+                        </div>
                      ))}
                   </div>
                </div>
                <div className="partie2">
                   <div className="partie2--proprio">
                      <p className="partie2--proprio--nom">
-                        {logementConsulte.host.name}
+                        {name[0]} <br></br>
+                        {name[1]}
                      </p>
                      <div className="partie2--proprio--photo"></div>
                   </div>
