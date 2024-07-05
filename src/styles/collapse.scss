@@ -9,9 +9,13 @@ $primaryColor: #FF6060 ;
 
 .collapse {
     display: flex;
+    width: 100%;
 
     flex-direction: column;
-    margin:50px;
+    padding-bottom: 25px ;
+    &__housing {
+        width: 45%;
+    }
     &--haut {
         height: 47px;
         width: 100%;
@@ -39,7 +43,11 @@ $primaryColor: #FF6060 ;
         background: #F6F6F6;
         border-radius: 10px;
         padding: 15px;
+        &__housing {
+            height: 100%;
+        }
         &--desc {
+            list-style: none;
             font : {
                 family:'Montserrat', sans-serif;
                 weight : 400
