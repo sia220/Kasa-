@@ -6,7 +6,7 @@ function Gallery() {
    return (
       <section className="galerie">
          {kasaList.map((element, index) => (
-            <Link to={`/logement/${element.id}`}>
+            <Link to={`/logement/${element.id}`} key={`logement--${index}`}>
                <article className="article" id={index}>
                   <img
                      className="article--img"
