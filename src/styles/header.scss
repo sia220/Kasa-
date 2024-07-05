@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+$mobile : 480px;
+$tablette : 1024px;
+
 .header {
     display: flex;
 
@@ -16,13 +19,39 @@
         family: "Montserrat", sans-serif;
         size: 24px;
     }
+    @media screen and (max-width : $tablette) {
+        margin: 25px 35px ;
+        font-size: 15px;
+        text-transform: uppercase; 
+    }
+    @media screen and (max-width : $mobile) {
+        margin: 20px ;
+        font-size: 12px;
+        line-height: 17.11px;
+    }
+    &--img{
+        @media screen and (max-width : $tablette) {
+            width: 200px;
+        }
+        @media screen and (max-width : $mobile) {
+            width: 145px;
+            height: 47px;
+        }
+    }
     &--nav {
         :first-child {
             padding-right: 40px;
+            @media screen and (max-width : $tablette) {
+                padding-right: 20px;
+            }
+            @media screen and (max-width : $mobile) {
+                padding-right: 9px;
+            }
         }
         &--link {
             color: #FF6060; 
             text-decoration: none;
+            align-self: center;
         }
         &--accueil {
             text-decoration: underline;
@@ -30,6 +59,9 @@
         &--apropos {
             text-decoration: underline;
         }
-
     }
 }
+
+
+
+
