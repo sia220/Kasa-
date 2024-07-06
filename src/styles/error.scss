@@ -10,6 +10,9 @@ $fontFamily : 'Montserrat', sans-serif;
 
 }
 
+$mobile : 480px;
+$tablette : 1024px;
+
 .main--error {
     display: flex;
     flex-direction: column;
@@ -21,13 +24,36 @@ $fontFamily : 'Montserrat', sans-serif;
         flex-direction: column;
         margin: 70px;
         align-items: center;
-        &--p {
-            size: 36px;
+        &--img {
+            @media screen and (max-width:$tablette){
+                width: 68%;
+
+            }
+            @media screen and (max-width:$mobile){
+                width: 198px;
+            }
+        }
+        &--texte {
             color: $primaryColor;
             line-height: 51.34px;
             font : {
                 family :$fontFamily ;
                 weight : 500;
+                size: 36px;
+            }
+            @media screen and (max-width:$tablette){
+                text-align: center;
+                font-size: 27px ;
+            }
+            @media screen and (max-width:$mobile){
+                font-size: 18px;
+                line-height: 25.67px;
+            }
+            &--br {
+                display: none;
+                @media screen and (max-width:$mobile){
+                    display: inline;
+                }
             }
         }
     }
@@ -38,6 +64,10 @@ $fontFamily : 'Montserrat', sans-serif;
         font : {
             family : $fontFamily ;
             weight : 500;
+        }
+        @media screen and (max-width:$mobile){
+            font-size: 14px;
+            line-height: 19.96px;
         }
     }
 }
