@@ -4,6 +4,24 @@
     box-sizing: border-box;
 }
 
+$mobile : 480px;
+$tablette : 1024px;
+
 .main--apropos {
     margin : 30px 60px;
+    @media screen and (max-width : $tablette) {
+        margin: 25px 35px ;
+    }
+    @media screen and (max-width : $mobile) {
+       margin: 20px ;
+    }    
+}
+.collapses {
+   margin: 40px;
+   @media screen and (max-width : $tablette) {
+       margin: 20px ;
+    }   
+   @media screen and (max-width : $mobile) {
+       margin: 0px ;
+    }   
 }
