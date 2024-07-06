@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+
+$mobile : 480px;
+$tablette : 1024px;
+
 .galerie {
     display : flex;
     
@@ -13,7 +17,11 @@
     border-radius : 25px;
     justify-content: space-evenly;
     padding : 30px 0px;
-    
+  
+    @media screen and (max-width : $mobile) {
+        background-color: transparent;
+        padding-top: 0;
+    }
 }
 
 .article {
@@ -25,11 +33,17 @@
     flex-direction : column;
     border-radius: 10px;
     margin-bottom: 30px;
+    @media screen and (max-width : $mobile) {
+        width: 100%;
+    }
     &--img {
         height: 100%;
 
         border-radius: 10px;
         object-fit: cover;
+        @media screen and (max-width : $mobile) {
+            width: 100%;
+        }
     }
     &--titre {
         position : absolute;
@@ -49,9 +63,12 @@
         position : absolute;
         width: 340px;
         height : 340px;
-        
+
         background: linear-gradient(transparent,black);
         opacity: 90%;
         border-radius: 10px;
+        @media screen and (max-width : $mobile) {
+            width: 100%;
+        }
     }
 }
