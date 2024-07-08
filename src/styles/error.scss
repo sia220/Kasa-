@@ -58,12 +58,12 @@ $tablette : 1024px;
         }
     }
     &--link {
-        size: 18px;
         color: $primaryColor;
         line-height: 25.67px;
         font : {
             family : $fontFamily ;
             weight : 500;
+            size: 18px;
         }
         @media screen and (max-width:$mobile){
             font-size: 14px;
