@@ -5,7 +5,16 @@
     box-sizing: border-box;
 }
 
+$mobile : 480px;
+$tablette : 1024px;
+
 .main--home {
     margin : 30px 60px;
+    @media screen and (max-width : $tablette) {
+        margin: 25px 35px ;
+    }
+    @media screen and (max-width : $mobile) {
+       margin: 20px ;
+    }
 }
 
