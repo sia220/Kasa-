@@ -5,14 +5,26 @@
     box-sizing: border-box;
 }
 
+$mobile : 480px;
+$tablette : 1024px;
+
 .main--housing {
     margin: 30px 60px;
+    @media screen and (max-width : $tablette) {
+        margin: 25px 35px ;
+    }
+    @media screen and (max-width : $mobile) {
+        margin: 20px;
+    }
 }
 
 .infos{
     display: flex;
     justify-content: space-between;
     margin: 25px 0;
+    @media screen and (max-width : $mobile) {
+        flex-direction: column;
+    }
     .partie1{
         display: flex;
         flex-direction: column;
@@ -21,22 +33,35 @@
             font-family: 'Montserrat', sans-serif;
             color: #FF6060 ;
             margin: 0;
-            size: 36px;
             line-height: 51.34px;
             font : {
+                size: 36px;
                 weight : 500;
                 family : 'Montserrat', sans-serif;
+            }   
+            @media screen and (max-width : $tablette) {
+                font-size: 23px;
             }
-            
+            @media screen and (max-width : $mobile) {
+                font-size: 18px;
+                line-height: 25.67px;
+            }
         }
         &--localisation{
             color: #FF6060 ;
             margin-top: 0;
-            size: 18px;
             line-height: 25.67px;
             font : {
+                size: 18px;
                 weight : 500;
                 family : 'Montserrat', sans-serif;
+            }
+            @media screen and (max-width : $tablette) {
+                font-size: 16px;
+            }
+            @media screen and (max-width : $mobile) {
+                font-size: 14px;
+                line-height: 19.96px;
             }
         }
         &--tags{
@@ -48,11 +73,18 @@
                 border-radius: 10px;
                 padding:  4px 20px;
                 margin-right: 10px;
-                size: 14px;
                 line-height: 19.96px;
                 font : {
+                    size: 14px;
                     weight : 500;
                     family : 'Montserrat', sans-serif;
+                }
+                @media screen and (max-width : $tablette) {
+                    font-size: 11px;
+                }
+                @media screen and (max-width : $mobile) {
+                    font-size: 10px;
+                    line-height: 14.26px;
                 }
             }
         }
@@ -61,17 +93,29 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @media screen and (max-width : $mobile) {
+            flex-direction: row-reverse;
+            align-items: center;
+        }
         &--proprio{
             display: flex;
             justify-content: flex-end;
+            align-items: center;
             &--nom{
-                size: 18px;
                 line-height: 25.67px;
                 color: #FF6060 ;
-                padding-right: 4px;
+                padding-right: 10px;
                 font : {
+                    size: 18px;
                     weight : 500;
                     family : 'Montserrat', sans-serif;
+                }
+                @media screen and (max-width : $tablette) {
+                    font-size: 16px;
+                }
+                @media screen and (max-width : $mobile) {
+                    font-size: 12px;
+                    line-height: 17.11px;
                 }
             }
             &--photo{
@@ -92,8 +136,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    &:first-child{
-        margin-right: 30px;
-        padding-right: 20px;
-        background: saddlebrown;}
+    @media screen and (max-width : $tablette) {
+        flex-direction: column;
+    }
 }

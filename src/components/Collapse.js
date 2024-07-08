@@ -23,7 +23,14 @@ function Collapse({ titre, description }) {
                   ? 'collapse--haut collapse--haut__housing'
                   : 'collapse--haut collapse--haut__apropos'
             }>
-            <h2 className="collapse--haut--titre">{titre}</h2>
+            <h2
+               className={
+                  page === 'housing'
+                     ? 'collapse--haut--titre collapse--haut--titre__housing'
+                     : 'collapse--haut--titre collapse--haut--titre__apropos'
+               }>
+               {titre}
+            </h2>
             <img
                className="collapse--haut--img"
                onClick={() => setIsClose(isClose === true ? false : true)}
@@ -40,10 +47,22 @@ function Collapse({ titre, description }) {
                {
                   // Si la props description est une chaîne de caractères, alors on utilise une balise p
                   typeof description === 'string' ? (
-                     <p className="collapse--bas--desc">{description}</p>
+                     <p
+                        className={
+                           page === 'housing'
+                              ? 'collapse--bas--desc collapse--bas--desc__housing'
+                              : 'collapse--bas--desc collapse--bas--desc__apropos'
+                        }>
+                        {description}
+                     </p>
                   ) : (
                      // Si la props description est un tableau, alors on utilise une balise ul et chaque élement est placé dans une balise li.
-                     <ul className="collapse--bas--desc">
+                     <ul
+                        className={
+                           page === 'housing'
+                              ? 'collapse--bas--desc collapse--bas--desc__housing'
+                              : 'collapse--bas--desc collapse--bas--desc__apropos'
+                        }>
                         {description.map((element, index) => (
                            <li key={`equipements--${index}`}>{element}</li>
                         ))}

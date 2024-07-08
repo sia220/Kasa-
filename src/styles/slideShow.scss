@@ -4,6 +4,10 @@
 *{
     box-sizing: border-box;
 }
+
+$mobile : 480px;
+$tablette : 1024px;
+
 .slideShow {
     width: 100%;
     height: 415px;  
@@ -11,6 +15,12 @@
     display: flex;
     justify-content: center;
     border-radius: 25px;
+    @media screen and (max-width : $tablette) {
+        height: 320px;
+    }
+    @media screen and (max-width : $mobile) {
+        height: 255px;
+    }
     &--background{
         width: 100%;
         height: 100%;
@@ -20,22 +30,38 @@
     &--arrowLeft{
         position: absolute;
         top: 180px;
-        left: 30px 
+        left: 30px ;
+        @media screen and (max-width : $tablette) {
+            width: 40px;
+            top: 129px;
+        }
+        @media screen and (max-width : $mobile) {
+            top: 110px;
+            width: 24px;
+        }
     }
     &--arrowRight {
         position: absolute;
         top: 180px;
-        right: 30px 
+        right: 30px;
+        @media screen and (max-width : $tablette) {
+            width: 40px;
+            top: 129px;
+        }
+        @media screen and (max-width : $mobile) {
+            top: 110px;
+            width: 24px;
+        }
     }
     &--compteur{
         position: absolute;
         bottom: 0px;
         color: white; 
         line-height: 25.67px;
-        size: 18px;
         font: {
             family : 'Montserrat', sans-serif;
             weight : 500;
+            size: 18px;
         }
     }
 }
