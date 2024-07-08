@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+$mobile : 480px;
+$tablette : 1024px;
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -15,10 +18,18 @@
     margin-top: 30px;
     &--texte {
         color : white;
+        line-height: 34.22px;
         font : {
-            family : "Montserrat";
+            family : "Montserrat", sans-serif;
             weight : 500;
             size : 24px;
+        }
+        @media screen and (max-width: $tablette) {
+            font-size: 18px;
+        }
+        @media screen and (max-width: $mobile) {
+            font-size: 12px;
+            line-height: 17.11px;
         }
     }
 }
