@@ -71,7 +71,9 @@ function SlideShow() {
                element === img[0] ? (
                   // Si le logement a plusieurs photos à afficher
                   NbPictures !== 1 ? (
-                     <p className="slideShow--compteur">
+                     <p
+                        key={`compteur--${index}`}
+                        className="slideShow--compteur">
                         {index + 1} / {NbPictures}
                      </p>
                   ) : null
