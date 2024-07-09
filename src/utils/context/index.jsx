@@ -1,5 +1,6 @@
 import React, { useState, createContext } from 'react';
 
+// Ce contexte permet d'indiquer la page consultée
 export const PageContext = createContext();
 
 export const PageProvider = ({ children }) => {
