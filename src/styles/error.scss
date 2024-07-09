@@ -3,6 +3,13 @@
 
 $primaryColor: #FF6060 ;
 $fontFamily : 'Montserrat', sans-serif;
+$mobile : 480px;
+$tablette : 1024px;
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
 
 * {
     box-sizing: border-box;
@@ -10,24 +17,18 @@ $fontFamily : 'Montserrat', sans-serif;
 
 }
 
-$mobile : 480px;
-$tablette : 1024px;
-
 .main--error {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     align-items: center;
 }
 .main {
     &--div {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         margin: 70px;
         align-items: center;
         &--img {
             @media screen and (max-width:$tablette){
                 width: 68%;
-
             }
             @media screen and (max-width:$mobile){
                 width: 198px;

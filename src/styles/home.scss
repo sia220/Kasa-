@@ -1,12 +1,12 @@
 @import "../styles/normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+$mobile : 480px;
+$tablette : 1024px;
+
 *{
     box-sizing: border-box;
 }
-
-$mobile : 480px;
-$tablette : 1024px;
 
 .main--home {
     margin : 30px 60px;

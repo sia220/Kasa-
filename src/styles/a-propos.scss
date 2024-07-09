@@ -1,11 +1,11 @@
 @import "../styles/normalize.css";
 
+$mobile : 480px;
+$tablette : 1024px;
+
 *{
     box-sizing: border-box;
 }
-
-$mobile : 480px;
-$tablette : 1024px;
 
 .main--apropos {
     margin : 30px 60px;

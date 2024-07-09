@@ -1,12 +1,15 @@
 @import "../styles/normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    box-sizing: border-box;
-}
 
 $mobile : 480px;
 $tablette : 1024px;
+$fontFamily : 'Montserrat', sans-serif;
+$primaryColor: #FF6060 ;
+
+*{
+    box-sizing: border-box;
+}
 
 .main--housing {
     margin: 30px 60px;
@@ -30,14 +33,13 @@ $tablette : 1024px;
         flex-direction: column;
         justify-content: space-between;
         &--titre {
-            font-family: 'Montserrat', sans-serif;
-            color: #FF6060 ;
             margin: 0;
+            color: $primaryColor ;
             line-height: 51.34px;
             font : {
                 size: 36px;
                 weight : 500;
-                family : 'Montserrat', sans-serif;
+                family : $fontFamily;
             }   
             @media screen and (max-width : $tablette) {
                 font-size: 23px;
@@ -48,13 +50,13 @@ $tablette : 1024px;
             }
         }
         &--localisation{
-            color: #FF6060 ;
             margin-top: 0;
+            color: $primaryColor ;
             line-height: 25.67px;
             font : {
                 size: 18px;
                 weight : 500;
-                family : 'Montserrat', sans-serif;
+                family : $fontFamily;
             }
             @media screen and (max-width : $tablette) {
                 font-size: 16px;
@@ -67,17 +69,17 @@ $tablette : 1024px;
         &--tags{
             display: flex;
             &--tag{
-                border: solid tranparent 1px;
-                background: #FF6060;
-                color: white;
-                border-radius: 10px;
                 padding:  4px 20px;
                 margin-right: 10px;
+                border: solid tranparent 1px;
+                border-radius: 10px;
+                background: $primaryColor;
+                color: white;
                 line-height: 19.96px;
                 font : {
                     size: 14px;
                     weight : 500;
-                    family : 'Montserrat', sans-serif;
+                    family : $fontFamily;
                 }
                 @media screen and (max-width : $tablette) {
                     font-size: 11px;
@@ -102,13 +104,13 @@ $tablette : 1024px;
             justify-content: flex-end;
             align-items: center;
             &--nom{
-                line-height: 25.67px;
-                color: #FF6060 ;
                 padding-right: 10px;
+                line-height: 25.67px;
+                color: $primaryColor ;
                 font : {
                     size: 18px;
                     weight : 500;
-                    family : 'Montserrat', sans-serif;
+                    family : $fontFamily;
                 }
                 @media screen and (max-width : $tablette) {
                     font-size: 16px;
@@ -119,16 +121,12 @@ $tablette : 1024px;
                 }
             }
             &--photo{
-                border-radius: 50%;
-                background: #C4C4C4;
                 height: 64px;
                 width: 64px;
+                border-radius: 50%;
+                background: #C4C4C4;
             }
         }
-        &--etoiles{
-
-        }
-
     }
 }
 

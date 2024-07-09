@@ -1,44 +1,44 @@
 @import "../styles/normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+$mobile : 480px;
+$tablette : 1024px;
+$fontFamily : 'Montserrat', sans-serif;
+
+@mixin dimensions-article {
+    width: 340px;
+    height : 340px;
+}
+
 *{
     box-sizing: border-box;
 }
 
-
-$mobile : 480px;
-$tablette : 1024px;
-
 .galerie {
     display : flex;
-    
     flex-wrap: wrap;
+    padding : 30px 0px;
+    justify-content: space-evenly;
     background-color : #F6F6F6;
     border-radius : 25px;
-    justify-content: space-evenly;
-    padding : 30px 0px;
-  
     @media screen and (max-width : $mobile) {
-        background-color: transparent;
         padding-top: 0;
+        background-color: transparent;
     }
 }
 
 .article {
-    display : flex;
-    width: 340px;
-    height : 340px;
     position: relative;
-
+    @include dimensions-article;
+    display : flex;
     flex-direction : column;
-    border-radius: 10px;
     margin-bottom: 30px;
+    border-radius: 10px;
     @media screen and (max-width : $mobile) {
         width: 100%;
     }
     &--img {
         height: 100%;
-
         border-radius: 10px;
         object-fit: cover;
         @media screen and (max-width : $mobile) {
@@ -50,20 +50,17 @@ $tablette : 1024px;
         bottom: 0px;
         left: 20px;
         z-index: 1;
-
         color: white;
         line-height: 25.67px;
         font : {
-            family: 'Montserrat', sans-serif;
+            family: $fontFamily;
             weight : 500;
             size : 18px;
         }
     }
     &--background{
         position : absolute;
-        width: 340px;
-        height : 340px;
-
+        @include dimensions-article;
         background: linear-gradient(transparent,black);
         opacity: 90%;
         border-radius: 10px;

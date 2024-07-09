@@ -1,26 +1,27 @@
 @import "../styles/normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+$mobile : 480px;
+$tablette : 1024px;
+$fontFamily : 'Montserrat', sans-serif;
+
 *{
     box-sizing: border-box;
 }
 
-$mobile : 480px;
-$tablette : 1024px;
-
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: black;
-    align-items : center; 
     height : 209px;
-    justify-content: center;
     margin-top: 30px;
+    justify-content: center;
+    align-items : center; 
+    background-color: black;
     &--texte {
         color : white;
         line-height: 34.22px;
         font : {
-            family : "Montserrat", sans-serif;
+            family : $fontFamily;
             weight : 500;
             size : 24px;
         }

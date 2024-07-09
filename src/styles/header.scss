@@ -1,22 +1,23 @@
 @import "../styles/normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+$mobile : 480px;
+$tablette : 1024px;
+$fontFamily : 'Montserrat', sans-serif;
+$primaryColor: #FF6060 ;
+
 *{
     box-sizing: border-box;
 }
 
-$mobile : 480px;
-$tablette : 1024px;
-
 .header {
     display: flex;
-
     flex-direction: row;
+    margin: 30px 60px;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 60px;
     font : {
-        family: "Montserrat", sans-serif;
+        family: $fontFamily;
         size: 24px;
     }
     @media screen and (max-width : $tablette) {
@@ -49,9 +50,9 @@ $tablette : 1024px;
             }
         }
         &--link {
-            color: #FF6060; 
-            text-decoration: none;
             align-self: center;
+            color: $primaryColor; 
+            text-decoration: none;
         }
         &--accueil {
             text-decoration: underline;
