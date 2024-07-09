@@ -1,15 +1,17 @@
+import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { PageContext } from '../utils/context/index';
 import QuatreCentQuatre from '../assets/404.svg';
 import Header from '../components/Header';
 import '../styles/error.scss';
-import { PageContext } from '../utils/context/index';
-import { useContext, useEffect } from 'react';
 
 function Error() {
+   // On indique la page consultée dans le contexte
    const { setPage } = useContext(PageContext);
    useEffect(() => {
       setPage('error');
    }, []);
+
    return (
       <div>
          <Header />
@@ -20,7 +22,7 @@ function Error() {
                   src={QuatreCentQuatre}
                   alt="404"></img>
                <p className="main--div--texte">
-                  Oups! La page que <br className="main--div--texte--br"></br>{' '}
+                  Oups! La page que <br className="main--div--texte--br"></br>
                   vous demandez n'existe pas.
                </p>
             </div>
