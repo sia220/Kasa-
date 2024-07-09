@@ -35,9 +35,6 @@ function Housing() {
    // Variable qui permet de parcourir les étoiles
    const range = [1, 2, 3, 4, 5];
 
-   // On place la string du nom et prenom dans un tableau où chacun represente un element
-   const name = logementConsulte.host.name.split(' ');
-
    return logementConsulte === undefined ? (
       <Link to="*"></Link>
    ) : (
@@ -54,7 +51,7 @@ function Housing() {
                   <div className="partie1--tags">
                      {logementConsulte.tags.map((element, index) => (
                         <div
-                           key={`etoile--${index}`}
+                           key={`tag--${index}`}
                            className="partie1--tags--tag">
                            {element}
                         </div>
@@ -64,17 +61,30 @@ function Housing() {
                <div className="partie2">
                   <div className="partie2--proprio">
                      <p className="partie2--proprio--nom">
-                        {name[0]} <br></br>
-                        {name[1]}
+                        {
+                           // On récupère le premier element de la string comprenant le nom et le prenom
+                           logementConsulte.host.name.split(' ')[0]
+                        }{' '}
+                        <br></br>
+                        {
+                           // On récupère le premier element de la string comprenant le nom et le prenom
+                           logementConsulte.host.name.split(' ')[1]
+                        }
                      </p>
                      <div className="partie2--proprio--photo"></div>
                   </div>
                   <div className="partie2--etoiles">
-                     {range.map((rangeElem) =>
+                     {range.map((rangeElem, index) =>
                         logementConsulte.rating >= rangeElem ? (
-                           <img src={StarActive}></img>
+                           <img
+                              key={`etoile-pleine--${index}`}
+                              alt="étoile pleine"
+                              src={StarActive}></img>
                         ) : (
-                           <img src={StarInactive}></img>
+                           <img
+                              key={`etoile-vide--${index}`}
+                              alt="étoile vide"
+                              src={StarInactive}></img>
                         )
                      )}
                   </div>
