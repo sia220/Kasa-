@@ -1,10 +1,11 @@
-import logo from '../assets/logo.svg';
-import { Link } from 'react-router-dom';
-import '../styles/header.scss';
-import { PageContext } from '../utils/context/index';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { PageContext } from '../utils/context/index';
+import logo from '../assets/logo.svg';
+import '../styles/header.scss';
 
 function Header() {
+   // On utilise le contexte pour savoir quelle page est consultée
    const { page } = useContext(PageContext);
 
    return (
@@ -14,6 +15,7 @@ function Header() {
          </Link>
          <nav className="header--nav">
             <Link
+               // Le className dépend de la page consultée afin de pouvoir souligner Acceuil si c'est cette page qui est consultée
                to="/"
                className={
                   page === 'home'
@@ -24,6 +26,7 @@ function Header() {
             </Link>
             <Link
                to="/a-propos"
+               // Le className dépend de la page consultée afin de pouvoir souligner A propos si c'est cette page qui est consultée
                className={
                   page === 'apropos'
                      ? 'header--nav--link header--nav--apropos'

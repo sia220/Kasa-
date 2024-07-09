@@ -1,16 +1,17 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
+import { PageContext } from '../utils/context/index';
+import StarActive from '../assets/star-active.svg';
+import StarInactive from '../assets/star-inactive.svg';
 import kasaList from '../datas/kasaList.json';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SlideShow from '../components/SlideShow';
 import Collapse from '../components/Collapse';
-import { PageContext } from '../utils/context/index';
-import StarActive from '../assets/star-active.svg';
-import StarInactive from '../assets/star-inactive.svg';
 import '../styles/housing.scss';
 
 function Housing() {
+   // On indique la page consultée dans le contexte
    const { setPage } = useContext(PageContext);
    useEffect(() => {
       setPage('housing');
@@ -62,31 +63,36 @@ function Housing() {
                   <div className="partie2--proprio">
                      <p className="partie2--proprio--nom">
                         {
-                           // On récupère le premier element de la string comprenant le nom et le prenom
+                           // On récupère le premier élément de la string comprenant le nom et le prenom
                            logementConsulte.host.name.split(' ')[0]
                         }{' '}
                         <br></br>
                         {
-                           // On récupère le premier element de la string comprenant le nom et le prenom
+                           // On récupère le premier élement de la string comprenant le nom et le prenom
                            logementConsulte.host.name.split(' ')[1]
                         }
                      </p>
                      <div className="partie2--proprio--photo"></div>
                   </div>
                   <div className="partie2--etoiles">
-                     {range.map((rangeElem, index) =>
-                        logementConsulte.rating >= rangeElem ? (
-                           <img
-                              key={`etoile-pleine--${index}`}
-                              alt="étoile pleine"
-                              src={StarActive}></img>
-                        ) : (
-                           <img
-                              key={`etoile-vide--${index}`}
-                              alt="étoile vide"
-                              src={StarInactive}></img>
+                     {
+                        // On parcourt le tableau range
+                        range.map((rangeElem, index) =>
+                           // Si le nombre d'étoiles du logement est supérieur ou égal au rang alors on affiche une étoile pleine
+                           logementConsulte.rating >= rangeElem ? (
+                              <img
+                                 key={`etoile-pleine--${index}`}
+                                 alt="étoile pleine"
+                                 src={StarActive}></img>
+                           ) : (
+                              // Si le nombre d'étoiles du logement est inférieur au rang alors on affiche une étoile vide
+                              <img
+                                 key={`etoile-vide--${index}`}
+                                 alt="étoile vide"
+                                 src={StarInactive}></img>
+                           )
                         )
-                     )}
+                     }
                   </div>
                </div>
             </section>

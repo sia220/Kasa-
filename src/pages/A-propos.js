@@ -1,13 +1,14 @@
+import { useContext, useEffect } from 'react';
+import { PageContext } from '../utils/context/index';
+import BannerImg from '../assets/banner-apropos.png';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Banner from '../components/Banner';
-import BannerImg from '../assets/banner-apropos.png';
-import { PageContext } from '../utils/context/index';
-import { useContext, useEffect } from 'react';
 import Collapse from '../components/Collapse';
 import '../styles/a-propos.scss';
 
 function Apropos() {
+   // On indique la page consultée dans le contexte
    const { setPage } = useContext(PageContext);
    useEffect(() => {
       setPage('apropos');

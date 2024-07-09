@@ -1,13 +1,14 @@
-import '../styles/home.scss';
+import { useContext, useEffect } from 'react';
+import { PageContext } from '../utils/context/index';
+import BannerImg from '../assets/banner-home.png';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import Banner from '../components/Banner';
-import BannerImg from '../assets/banner-home.png';
-import { PageContext } from '../utils/context/index';
-import { useContext, useEffect } from 'react';
+import '../styles/home.scss';
 
 function Home() {
+   // On indique la page consultée dans le contexte
    const { setPage } = useContext(PageContext);
    useEffect(() => {
       setPage('home');
