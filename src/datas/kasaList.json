@@ -32,9 +32,9 @@
     {
         "id": "b9123946",
         "title": "Magnifique appartement proche Canal Saint Martin",
-        "cover": "",
+        "cover": "https://raw.githubusercontent.com/sia220/Kasa-/master/src/assets/image-modifiee-1.jpg",
         "pictures": [
-            "",
+            "https://raw.githubusercontent.com/sia220/Kasa-/master/src/assets/image-modifiee-1.jpg",
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-2.jpg",
             "",
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-4.jpg",
