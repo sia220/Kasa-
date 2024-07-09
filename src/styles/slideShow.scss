@@ -63,5 +63,8 @@ $tablette : 1024px;
             weight : 500;
             size: 18px;
         }
+        @media screen and (max-width : $mobile) {
+            display: none;
+        }
     }
 }
