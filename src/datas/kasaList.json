@@ -36,7 +36,7 @@
         "pictures": [
             "https://raw.githubusercontent.com/sia220/Kasa-/master/src/assets/image-modifiee-1.jpg",
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-2.jpg",
-            "",
+            "https://raw.githubusercontent.com/sia220/Kasa-/master/src/assets/image-modifiee-2.jpg",
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-4.jpg",
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-5.jpg",
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-6.jpg"
@@ -215,11 +215,11 @@
     {
         "id": "bc6f7112",
         "title": "Superbe appartement proche Tour Eiffel",
-        "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-1.jpg",
+        "cover": "https://raw.githubusercontent.com/sia220/Kasa-/master/src/assets/image-modifiee-3.jpg",
         "pictures": [
-            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-1.jpg",
-            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-2.jpg",
-            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-3.jpg",
+            "https://raw.githubusercontent.com/sia220/Kasa-/master/src/assets/image-modifiee-3.jpg",
+            "https://raw.githubusercontent.com/sia220/Kasa-/master/src/assets/image-modifiee-4.jpg",
+            "https://raw.githubusercontent.com/sia220/Kasa-/master/src/assets/image-modifiee-4.jpg",
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-4.jpg",
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-5.jpg",
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-6.jpg"
@@ -445,7 +445,7 @@
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-14-2.jpg",
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-14-3.jpg",
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-14-4.jpg",
-            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-14-5.jpg"
+            "https://raw.githubusercontent.com/sia220/Kasa-/master/src/assets/image-modifiee-6.jpg"
         ],
         "description": "Maison T5. Idéale pour grands groupes. 45 minutes de Paris Saint-Lazare.",
         "host": {
@@ -567,7 +567,7 @@
         "pictures": [
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-18-1.jpg",
             "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-18-2.jpg",
-            ""
+            "https://raw.githubusercontent.com/sia220/Kasa-/master/src/assets/image-modifiee-7.jpg"
         ],
         "description": "Ce studio décoré avec goût sera votre nid douillet après une longue journée passée à découvrir Paris.",
         "host": {
@@ -592,9 +592,9 @@
     {
         "id": "cb02d69b",
         "title": "Magnifique appartement Rivoli",
-        "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-19-1.jpg",
+        "cover": "https://raw.githubusercontent.com/sia220/Kasa-/master/src/assets/image-modifiee-8.jpg",
         "pictures": [
-            ""
+            "https://raw.githubusercontent.com/sia220/Kasa-/master/src/assets/image-modifiee-8.jpg"
         ],
         "description": "Au coeur du quartier historique du Marais, cet appartement est idéal pour un couple à la découverte de Paris. Situé sur la rue de Rivoli, il est à 5 minutes du Louvre.",
         "host": {
