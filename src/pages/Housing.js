@@ -72,7 +72,10 @@ function Housing() {
                            logementConsulte.host.name.split(' ')[1]
                         }
                      </p>
-                     <div className="partie2--proprio--photo"></div>
+                     <img
+                        alt="initiales propriétaire"
+                        src={logementConsulte.host.picture}
+                        className="partie2--proprio--photo"></img>
                   </div>
                   <div className="partie2--etoiles">
                      {
