@@ -20,5 +20,6 @@ ReactDOM.render(
          </PageProvider>
       </Router>
    </React.StrictMode>,
+   // Endroit où ce code sera généré dans le HTML
    document.getElementById('root')
 );
