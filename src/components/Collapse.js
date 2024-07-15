@@ -1,5 +1,4 @@
 import { useContext, useState } from 'react';
-import PropTypes from 'prop-types';
 import { PageContext } from '../utils/context/index';
 import ArrowTop from '../assets/arrow-top.svg';
 import ArrowBottom from '../assets/arrow-bottom.svg';
@@ -79,9 +78,5 @@ function Collapse({ titre, description }) {
       </div>
    );
 }
-
-Collapse.propTypes = {
-   titre: PropTypes.string,
-};
 
 export default Collapse;
